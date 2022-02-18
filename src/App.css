@@ -1,0 +1,170 @@
+html{
+  font-size: 10px;
+  font-family: 'Roboto', sans-serif;
+  box-sizing: border-box;
+  font-size: sans-serif;
+}
+
+*, *::before, *::after{
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+}
+
+button{
+  cursor: pointer;
+}
+
+.App{
+  min-height: 100vh;
+  background-color: sandybrown;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title{
+  font-size: 3rem;
+  margin: 2rem;
+  overflow: hidden;
+  height: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.title > span{
+  color: white;
+  background-color: orangered;
+  padding: 0.5rem 1rem;
+  margin: 0.5rem;
+  transform: translatey(-200%);
+}
+
+
+.title > span:nth-child(1){
+  background-color: mediumseagreen;
+  transition: transform 0.2s;
+}
+
+.title > span:nth-child(2){
+  background-color: darkcyan;
+  transition: transform 0.4s;
+}
+
+.title > span:nth-child(3){
+  background-color: orangered;
+  transition: transform 0.6s;
+}
+.title > span:nth-child(4){
+  background-color: mediumseagreen;
+  transition: transform 0.8s;
+}
+
+.title > span:nth-child(5){
+  background-color: olivedrab;
+  transition: transform 1s;
+}
+
+
+.title.transform > span{
+  transform: translateY(0);
+}
+
+.who-won{
+  color: white;
+  font-size: 3rem;
+}
+
+.boards{
+  width: 100%;
+  margin: 1rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.board{
+  width: fit-content;
+  padding: 1rem;
+  margin: 1rem;
+  border: 0.5rem solid hsl(210, 100%, 76%);
+  border-radius: 1rem;
+  background-color: gainsboro;
+  display: flex;
+}
+.board.turn{
+  border: 0.5rem solid hsl(210, 100%, 56%);
+}
+
+.cell{
+  font-size: 1.4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.board__bingo{
+  margin-right: 0.5rem;
+  display: grid;
+  grid-template-rows: repeat(5, 3rem);
+  grid-gap: 0.5rem
+}
+
+.board__bingo > .cell{
+  width: 3rem;
+  background-color: gray;
+  color: white;
+  border-radius: 0.5rem;
+}
+
+.board__bingo > .cell.done{
+  background-color: limegreen;
+}
+
+.board__entries{
+  display: grid;
+  grid-template-columns: repeat(5, 3rem);
+  grid-template-rows: repeat(5, 3rem);
+  grid-gap: 0.5rem;
+  justify-items: center;
+  align-items: center;
+}
+
+.board__entries > .cell{
+  width: 85%;
+  height: 85%;
+  background-color: white;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.board__entries > .marked.dodgerblue{
+  color: white;
+  background-color: dodgerblue;
+}
+
+.board__entries > .marked.tomato{
+  color: white;
+  background-color: tomato;
+}
+
+.controls{
+  margin: 1rem;
+}
+
+.controls > button{
+  margin: 0 1rem;
+  font-size: 1.8rem;
+  color: white;
+  background-color: darkcyan;
+  border: none;
+  border-radius: 0.3rem;
+  padding: 0.5rem 1rem;
+}
+
+@media(max-width: 480px){
+  .boards{
+    flex-direction: column;
+  }
+}
