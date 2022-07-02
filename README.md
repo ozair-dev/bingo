@@ -1,7 +1,14 @@
-# bingo
+# Bingo game made with ReactJS
 
 
 See [demo](https://ozair-dev.github.io/bingo) here
+
+
+## Previews
+
+![](assets/images/1.png)
+
+![](assets/images/0.png)
 
 
 ## Getting started
